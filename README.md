@@ -4,6 +4,25 @@ docker-mailserver
 Docker Mailserver based on the famous [ISPMail guide](https://workaround.org/ispmail/).
 All images are based on [Alpine Linux](https://alpinelinux.org) and are so small as possible.
 
+# .env --> prod
+MYSQL_DATABASE=mailserver
+MYSQL_USER=mailserver
+MYSQL_PASSWORD=test@123
+MYSQL_ROOT_PASSWORD=test@123
+MAILNAME=mail.testlab.com
+POSTMASTER=postmaster@testlab.com
+RELAYHOST=false
+FILTER_MIME=false
+FILTER_VIRUS=true
+ENABLE_IMAP=true
+ENABLE_POP3=true
+CONTROLLER_PASSWORD=test@123
+CONTROLLER_SECURE_NETWORK=172.16.0.0/12
+WAITSTART_TIMEOUT=2m
+RECIPIENT_DELIMITER=-
+
+=================================================
+
 Build status
 ------------
 ![Lint YAMLs and Dockerfiles](https://github.com/jeboehm/docker-mailserver/workflows/Lint%20YAMLs%20and%20Dockerfiles/badge.svg)
